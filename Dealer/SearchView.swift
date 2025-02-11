@@ -103,7 +103,7 @@ struct SearchView: View {
 
     func columnCollapsedWidth(_ width: CGFloat) -> CGFloat {
         let ret = width / columnFactor
-        if ret < 300 { return width }
+        if ret < 250 { return width }
         return ret
     }
 
