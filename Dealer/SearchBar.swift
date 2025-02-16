@@ -25,10 +25,12 @@ struct SearchBar: View {
                 typeField
             }
             .onKeyPress(.rightArrow) {
+                guard !isFocused || vm.text.isEmpty else { return .ignored }
                 vm.nextSearchType()
                 return .handled
             }
             .onKeyPress(.leftArrow) {
+                guard !isFocused || vm.text.isEmpty else { return .ignored }
                 vm.previousSearchType()
                 return .handled
             }
